@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jozi Nites - BlackSpice</title>
+  <link rel="icon" type="image/png" href="black-spice-logo.png">
   <!-- Firebase App & Auth / Firestore SDKs v8 -->
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
@@ -65,11 +66,231 @@
     .bank-card h3 { color: #ffd700; margin-top: 0; font-size: 1.2em; border-bottom: 1px dashed #8b4513; padding-bottom: 8px; }
     .badge-sa { background: #1e4620; color: #85e088; padding: 4px 12px; border-radius: 20px; font-size: 0.85em; font-weight: bold; }
     .badge-intl { background: #4a3319; color: #ffd700; padding: 4px 12px; border-radius: 20px; font-size: 0.85em; font-weight: bold; }
+
+    /* Footer Styling */
+    footer {
+      background: linear-gradient(180deg, #150d06 0%, #0a0502 100%);
+      border-top: 2px solid #8b4513;
+      color: #f5e6d3;
+      padding: 50px 20px 25px 20px;
+      margin-top: 60px;
+      text-align: left;
+    }
+    .footer-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 35px;
+    }
+    .footer-col h3 {
+      color: #ffd700;
+      font-size: 1.25em;
+      margin-top: 0;
+      margin-bottom: 18px;
+      position: relative;
+      padding-bottom: 8px;
+    }
+    .footer-col h3::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 40px;
+      height: 2px;
+      background: #d4af37;
+    }
+    .footer-col p {
+      font-size: 0.95em;
+      line-height: 1.6;
+      color: #d4af37;
+    }
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+    .footer-col ul li a {
+      color: #f5e6d3;
+      text-decoration: none;
+      font-size: 0.95em;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+    .footer-col ul li a:hover {
+      color: #ffd700;
+      text-decoration: underline;
+    }
+    .footer-logo {
+      width: 120px;
+      margin-bottom: 15px;
+      filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.3));
+    }
+    .social-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+    .social-btn {
+      display: inline-block;
+      padding: 8px 16px;
+      background: #1c1208;
+      border: 1px solid #d4af37;
+      color: #ffd700;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.88em;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    .social-btn:hover {
+      background: #d4af37;
+      color: #1c1208;
+    }
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 40px auto 0 auto;
+      padding-top: 20px;
+      border-top: 1px solid #2a1f18;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      font-size: 0.88em;
+      color: #a89278;
+    }
+    .footer-bottom p {
+      margin: 0;
+    }
+    .footer-badges {
+      display: flex;
+      gap: 10px;
+    }
+
+    /* Age Gate Overlay */
+    .age-gate-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(13, 7, 3, 0.96);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100000;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .age-gate-card {
+      background: linear-gradient(145deg, #1c1208, #2a1f18);
+      border: 2px solid #d4af37;
+      border-radius: 20px;
+      padding: 35px 25px;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9), 0 0 20px rgba(212, 175, 55, 0.2);
+      text-align: center;
+    }
+    .age-gate-card img {
+      width: 110px;
+      margin-bottom: 15px;
+      filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+    }
+    .age-gate-card h2 {
+      color: #ffd700;
+      margin: 10px 0;
+      font-size: 1.8em;
+    }
+    .age-gate-card p {
+      color: #f5e6d3;
+      font-size: 0.98em;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .age-gate-checkboxes {
+      text-align: left;
+      background: #110a04;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid #8b4513;
+      margin-bottom: 20px;
+    }
+    .age-gate-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.9em;
+      color: #f5e6d3;
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+    .age-gate-label:last-child {
+      margin-bottom: 0;
+    }
+    .age-gate-label input[type="checkbox"] {
+      accent-color: #d4af37;
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      cursor: pointer;
+    }
+    .age-gate-btn {
+      width: 100%;
+      padding: 14px;
+      font-size: 1.1em;
+      font-weight: bold;
+      border-radius: 30px;
+      background: #8b4513;
+      color: #7a6e65;
+      border: none;
+      cursor: not-allowed;
+      transition: all 0.3s ease;
+    }
+    .age-gate-btn.enabled {
+      background: #d4af37;
+      color: #1c1208;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    }
+    .age-gate-btn.enabled:hover {
+      background: #ffd700;
+      transform: scale(1.02);
+    }
   </style>
 </head>
 <body>
+  <!-- Age Gate Overlay -->
+  <div id="ageGateModal" class="age-gate-overlay">
+    <div class="age-gate-card">
+      <img src="blackspice.png" alt="BlackSpice Logo">
+      <h2>Age & Consent Verification 🔞</h2>
+      <p>Welcome to <strong>BlackSpice & Jozi Nites</strong>. This platform is strictly reserved for adults. Please verify your details to continue.</p>
+
+      <div class="age-gate-checkboxes">
+        <label class="age-gate-label">
+          <input type="checkbox" id="ageCheckbox" onchange="toggleAgeGateBtn()">
+          <span>I confirm that I am <strong>18 years of age or older</strong> (or legal adult age in my jurisdiction).</span>
+        </label>
+        <label class="age-gate-label">
+          <input type="checkbox" id="termsCheckbox" onchange="toggleAgeGateBtn()">
+          <span>I agree to the <strong>Terms & Conditions</strong>, Community Guidelines, and All Rights Reserved copyright provisions.</span>
+        </label>
+        <label class="age-gate-label">
+          <input type="checkbox" id="popiaCheckbox" onchange="toggleAgeGateBtn()">
+          <span>I consent to data processing in accordance with <strong>POPIA</strong> (Protection of Personal Information Act).</span>
+        </label>
+      </div>
+
+      <button id="enterBtn" class="age-gate-btn" disabled onclick="verifyAgeGate()">ENTER SITE 👑</button>
+    </div>
+  </div>
+
   <header>
-    <img src="logo.png" alt="Jozi Nites BlackSpice Logo" class="logo">
+    <img src="blackspice.png" alt="Jozi Nites BlackSpice Logo" class="logo">
     <h1>BlackSpice</h1>
     <p>Deep Black Love • Kinky Passion • For Kings & Queens Only 👑</p>
   </header>
@@ -187,6 +408,56 @@
       </div>
     </div>
   </div>
+
+  <!-- Responsive Modern Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <img src="blackspice.png" alt="BlackSpice Logo" class="footer-logo">
+        <p>Celebrating deep Black passion, romance, and adult gaming in Johannesburg & beyond. Built for Kings & Queens. Strictly 18+.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Navigation</h3>
+        <ul>
+          <li><a onclick="showSection('home')">Home</a></li>
+          <li><a onclick="showSection('questions')">Kinky Questions</a></li>
+          <li><a onclick="showSection('dares')">Kinky Dares</a></li>
+          <li><a onclick="showSection('moments')">Private Moments</a></li>
+          <li><a onclick="showSection('tracker')">Passion Tracker</a></li>
+          <li><a onclick="showSection('coffee')">☕ Buy Us A Coffee</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal & Privacy</h3>
+        <ul>
+          <li><a onclick="alert('Terms & Conditions: Strict 18+ policy. All adult content is consenting and private.')">Terms & Conditions</a></li>
+          <li><a onclick="alert('POPIA Notice: Your data privacy is respected and protected in compliance with SA POPIA laws.')">POPIA Privacy Policy</a></li>
+          <li><a onclick="alert('Age Gate Policy: Access limited to adults aged 18 and over.')">18+ Verification Policy</a></li>
+          <li><a onclick="alert('Community Guidelines: Respect, consent, and royal energy at all times.')">Community Guidelines</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Connect & Support</h3>
+        <p>Join the Jozi Nites community and stay updated with new features.</p>
+        <div class="social-links">
+          <a href="#" class="social-btn">Instagram</a>
+          <a href="#" class="social-btn">WhatsApp</a>
+          <a href="#" class="social-btn">X (Twitter)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Jozi Nites - BlackSpice. All Rights Reserved. All characters depicted are proud Black South Africans.</p>
+      <div class="footer-badges">
+        <span class="badge-sa">POPIA Compliant 🇿🇦</span>
+        <span class="badge-intl">18+ Adults Only 🔞</span>
+      </div>
+    </div>
+  </footer>
 
   <script>
     // === FIREBASE CONFIG ===
@@ -348,7 +619,41 @@
       if (user) updateUI();
     });
 
+    function toggleAgeGateBtn() {
+      const ageChecked = document.getElementById('ageCheckbox').checked;
+      const termsChecked = document.getElementById('termsCheckbox').checked;
+      const popiaChecked = document.getElementById('popiaCheckbox').checked;
+      const btn = document.getElementById('enterBtn');
+
+      if (ageChecked && termsChecked && popiaChecked) {
+        btn.disabled = false;
+        btn.classList.add('enabled');
+      } else {
+        btn.disabled = true;
+        btn.classList.remove('enabled');
+      }
+    }
+
+    function verifyAgeGate() {
+      const ageChecked = document.getElementById('ageCheckbox').checked;
+      const termsChecked = document.getElementById('termsCheckbox').checked;
+      const popiaChecked = document.getElementById('popiaCheckbox').checked;
+
+      if (ageChecked && termsChecked && popiaChecked) {
+        localStorage.setItem('blackspice_age_verified', 'true');
+        document.getElementById('ageGateModal').style.display = 'none';
+      }
+    }
+
+    function checkAgeVerification() {
+      if (localStorage.getItem('blackspice_age_verified') === 'true') {
+        const modal = document.getElementById('ageGateModal');
+        if (modal) modal.style.display = 'none';
+      }
+    }
+
     window.onload = () => {
+      checkAgeVerification();
       newQuestion();
       newDare();
     };
